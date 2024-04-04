@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Tìm Việc Làm</title>
+    <style>
+        /* CSS để tạo giao diện cho thanh trang chủ */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #331212;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Trang Chủ</a>
+  <a href="#jobs">Các Việc Làm</a>
+  <a href="#about">Về Chúng Tôi</a>
+  <a href="#contact">Liên Hệ</a>
+</div>
+
+<div style="padding:20px;margin-top:30px;background-color:#f4f4f4;height:1500px;">
+  <h2>Tìm kiếm việc làm</h2>
+  <p> <div class="job-listing">
+    <div class="company">
+        <h2>ABC Technology</h2>
+        <p>Lập trình viên Frontend</p>
+        <p>Hà Nội, Việt Nam</p>
+        <a href="#">Chi tiết</a>
+    </div>
+
+    <div class="company">
+        <h2>XYZ Corporation</h2>
+        <p>Chuyên viên Marketing</p>
+        <p>New York, USA</p>
+        <a href="#">Chi tiết</a>
+    </div>
+
+    <div class="company">
+        <h2>DEF Enterprises</h2>
+        <p>Kỹ sư Phần mềm</p>
+        <p>London, Anh</p>
+        <a href="#">Chi tiết</a>
+    </div>
+
+    <div class="company">
+        <h2>GHI Solutions</h2>
+        <p>Chuyên viên Tư vấn Kinh doanh</p>
+        <p>Tokyo, Nhật Bản</p>
+        <a href="#">Chi tiết</a>
+    </div>
+</div>
+
+</body>
+</html> 
+<style>
+    /* CSS cho việc làm của 4 công ty */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.job-listing {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.company {
+    width: calc(25% - 20px); /* 25% chiều rộng, 20px padding giữa các công ty */
+    margin: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.company h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.company p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.company a {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.company a:hover {
+    background-color: #0056b3;
+}
+</style>
+</p>
