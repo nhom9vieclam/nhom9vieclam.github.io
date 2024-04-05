@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        /* CSS để trang trí giao diện */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            float: right;
+        }
+        .full-time {
+            color: #2E86C1;
+        }
+        .part-time {
+            color: #58D68D;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h1>Task List</h1>
+    <ul id="taskList">
+        <!-- Các công việc đã được thêm vào sẽ xuất hiện ở đây -->
+        <li class="full-time">Write report <button onclick="removeTask(0)">Remove</button></li>
+        <li class="part-time">Walk the dog <button onclick="removeTask(1)">Remove</button></li>
+        <li class="full-time">Attend meeting <button onclick="removeTask(2)">Remove</button></li>
+    </ul>
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <select id="taskType">
+        <option value="full-time">Full-time</option>
+        <option value="part-time">Part-time</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+</div>
+
+<script>
+    // JavaScript để thêm, xóa và hiển thị công việc
+    var tasks = [
+        { name: "Write report", type: "full-time" },
+        { name: "Tutor", type: "part-time" },
+        { name: "Attend meeting", type: "full-time" },
+        { name: "Sales Collaborator", type: "part-time" } ]
+
+    function addTask() {
+        var taskInput = document.getElementById("taskInput");
+        var taskTypeSelect = document.getElementById("taskType");
+        var task = taskInput.value.trim();
+        var type = taskTypeSelect.value;
+        if (task !== "") {
+            tasks.push({ name: task, type: type });
+            displayTasks();
+            taskInput.value = "";
+        }
+    }
+
+    function removeTask(index) {
+        tasks.splice(index, 1);
+        displayTasks();
+    }
+
+    function displayTasks() {
+        var taskListElement = document.getElementById("taskList");
+        taskListElement.innerHTML = "";
+        tasks.forEach(function(task, index) {
+            var li = document.createElement("li");
+            li.textContent = task.name + " ";
+            var button = document.createElement("button");
+            button.textContent = "Remove";
+            button.onclick = function() { removeTask(index); };
+            li.appendChild(button);
+            li.classList.add(task.type);
+            taskListElement.appendChild(li);
+        });
+
+        if (tasks.length === 0) {
+            var li = document.createElement("li");
+            li.textContent = "No tasks in the list.";
+            taskListElement.appendChild(li);
+        }
+    }
+
+    // Hiển thị các công việc khi trang được tải lần đầu
+    displayTasks();
+</script>
+
+</body>
+</html>
