@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Tuyển Dụng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .contact-info p {
+            margin-bottom: 5px;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .section:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .contact-info p a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-info p a:hover {
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fadeIn {
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fadeIn">Hồ Sơ Tuyển Dụng</h1>
+        <div class="section fadeIn">
+            <h2>Thông Tin Cá Nhân</h2>
+            <p><strong>Họ và Tên:</strong> Nguyễn Văn A</p>
+            <p><strong>Ngày Sinh:</strong> 01/01/1990</p>
+            <p><strong>Địa Chỉ:</strong> 123 Đường ABC, Quận XYZ, Thành Phố HCM</p>
+            <p><strong>Email:</strong> example@email.com</p>
+            <p><strong>Điện Thoại:</strong> 0123 456 789</p>
+        </div>
+        <div class="section fadeIn">
+            <h2>Kinh Nghiệm Làm Việc</h2>
+            <p><strong>Công Ty ABC</strong> - Vị Trí: Nhân Viên Kinh Doanh (01/2018 - 12/2020)</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><strong>Công Ty XYZ</strong> - Vị Trí: Quản Lý Dự Án (01/2021 - Hiện tại)</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="section contact-info fadeIn">
+            <h2>Thông Tin Liên Hệ</h2>
+            <p><strong>Họ và Tên Người Liên Hệ:</strong> Nguyễn Văn B</p>
+            <p><strong>Địa Chỉ:</strong> 456 Đường XYZ, Quận ABC, Thành Phố HCM</p>
+            <p><strong>Email:</strong> <a href="mailto:contact@example.com">contact@example.com</a></p>
+            <p><strong>Điện Thoại:</strong> <a href="tel:+84987654321">0987 654 321</a></p>
+        </div>
+    </div>
+</body>
+</html>
