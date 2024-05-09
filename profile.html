@@ -3,192 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teamnine.jobs</title>
+  <title>Hồ sơ người dùng</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<h1>Teamnine.Jobs</h1>
-<nav>
-  <ul class="menu">
-    <li><a href="index.html">Trang chủ</a></li>
-    <li><a href="jobs.html">Danh sách việc làm</a></li>
-    <li><a href="contact.html">Thông tin liên hệ</a></li>
-    <li><a href="profile.html">Hồ sơ người dùng</a></li>
-    <li><a href="#">  
-      <div class="apply-now">
-      <div class="container">
-          <form action="#">
-              <input type="text" placeholder="Vị trí ứng tuyển">
-              <button type="submit">Tìm kiếm</button>
-          </form>
-      </div>
-      </div>
-  </a></li>
-  </ul>
-</nav>
 <body>
-  <style>
-    body {
+  <header>
+    <h1>Tìm kiếm việc làm</h1>
+    <nav class="header__navbar">
+        <ul class="header__navbar-list">
+            <li class="header__navbar-item">
+                <a href="jobs.html" class="header__navbar-item-link">Việc làm</a>
+            </li>
+            <li class="header__navbar-item">
+                <a href="apply.html" class="header__navbar-item-link">Ứng tuyển</a>
+            </li>
+            <li class="header__navbar-item">
+                <a href="contact.html" class="header__navbar-item-link">Liên hệ</a>
+            </li>
+            <li class="header__navbar-item">
+                <a href="profile.html" class="header__navbar-item-link">Hồ sơ người dùng</a>
+
+            </li>
+        </ul>
+    </nav>
+</header>
+  <div class="container">
+    <h1>Hồ sơ người dùng</h1>
+    <form action="submit_profile.php" method="post">
+      <div class="form-group">
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Số điện thoại:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Nơi ở:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Kinh nghiệm:</label>
+        <textarea id="experience" name="experience" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="education">Học vấn:</label>
+        <textarea id="education" name="education" required></textarea>
+      </div>
+
+      <button type="submit">Lưu hồ sơ</button>
+    </form>
+  </div>
+</body>
+<style>
+  body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   margin: 0;
-  padding: 0;
-}
-h1 {
-  text-align: center;
-  margin-right: 25cm;
-  margin-top: 20px;
-}
-nav {
-  background-color: #000000;
-}
-
-.menu {
-  list-style-type: none;
-  margin-left: 5cm;
-  padding: 0;
-  display: flex;
-}
-
-.menu li {
-  margin-right: 20px;
-}
-
-.menu li:last-child {
-  margin-right: 5;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 15px 20px;
-  display: block;
-}
-
-.menu li a:hover {
-  background-color: #000000;
-  margin-top: 2px;
-}
-.apply-now {
-    background-color: #000000;
-    padding: 0 0;
-    text-align: center;
-}
-.apply-now input[type="text"] {
-    padding: 4px;
-    width: 200px;
-    border: 1px solid #ccc;
-}
-
-.apply-now button {
-    padding: 5px 15px;
-    border: none;
-    background-color: #6b6b6b;
-    color: #fff;
-    cursor: pointer;
-}
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
-  margin left: 20px;
   padding: 0;
 }
 
 .container {
-  width: 8
+  max-width: 600px;
   margin: 50px auto;
   background-color: #fff;
-  
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.header {
+h1 {
   text-align: center;
-  margin-bottom: 30px;
+  color: #333;
 }
 
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.name {
-  color: #ffffff;
-  font-size: 30px;
-  margin-bottom: 5px;
-}
-
-.title {
-  color: #000000;
-  font-size: 20px;
-}
-
-.section {
-  margin-bottom: 30px;
-}
-
-h2 {
-  color: #000000;
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 5px;
-  margin-left: 20px;
-}
-
-h3 {
-  color: #000000;
-  margin-bottom: 5px;
-  margin-left: 20px;
-}
-
-p {
-  color: #000000;
-  margin-bottom: 10px;
-  margin-left: 20px;
-}
-
-.experience {
-  border-left: 2px solid #ffffff;
-  padding-left: 10px;
+.form-group {
   margin-bottom: 20px;
 }
-  </style>
-  <div>
-    <div class="container">
-        <div class="header">
-          <img src="liu.jfif" alt="Profile Picture" class="profile-picture">
-          <h1 class="name">Le Khac Tung</h1>
-          <p class="title">Web Developer</p>
-        </div>
-  </div>
-        <div class="section">
-          <h2>Contact Information</h2>
-          <p>Email: viewtung858@gmail.com.com</p>
-          <p>Phone:0978557445</p>
-          <p>Location: HA Noi City </p>
-        </div>
-        <div class="section">
-          <h2>Summary</h2>
-          <p> Một nhà phát triển web có tay nghề cao với hơn 2 năm kinh nghiệm về HTML, CSS, JavaScript và các khung web khác nhau. Thành tích đã được chứng minh về việc cung cấp các dự án chất lượng cao đúng thời hạn và trong ngân sách. Kỹ năng giải quyết vấn đề mạnh mẽ và khả năng làm việc hiệu quả trong môi trường nhóm</p>
-        </div>
-        <div class="section">
-          <h2>Experience</h2>
-          <div class="experience">
-            <h3>nhân viên lập trình web - teamnine Company</h3>
-            <p>Dẫn dắt nhóm phát triển trong việc thiết kế và triển khai các ứng dụng web sử dụng công nghệ hiện đại.</p>
-            <p>Phối hợp với khách hàng để thu thập yêu cầu và cung cấp giải pháp kỹ thuật</p>
-            <p></p>
-          </div>
-          <div class="experience">
-            <h3>nhà phát triển web - teamnine company</h3>
-            <p>Phát triển và duy trì các trang web của công ty, đảm bảo hiệu suất và khả năng phản hồi cao</p>
-            <p>Các ứng dụng web được tối ưu hóa để có tốc độ và khả năng mở rộng tối đa.</p>
-          </div>
-        </div>
-        <div class="section">
-          <h2>Education</h2>
-          <h3>nhà lập trình học về thiết kế web</h3>
-          <p>University of ISVNU, Ha Noi </p>
-          <p>TỐT NGHIỆP LOẠI GIỎI</p>
-        </div>
-      </div>
-    </body>
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.scrollable-area {
+            max-height: fit-content;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url(https://www.findjobs.vn/htdocs/images/Minh%20Phuc/find%20jobs-01.jpg);
+    overflow-y: auto;
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+header {
+    background-color: rgb(154, 154, 161);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    size: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.search-container input[type="text"], .search-container button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container button {
+    background-color:gray;
+    color: #fff;
+    cursor: pointer;
+}
+</style>
+</html>
