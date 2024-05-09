@@ -7,24 +7,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html">Trang chủ</a></li>
-      <li><a href="jobs.html">Danh sách việc làm</a></li>
-      <li><a href="contact.html">Thông tin liên hệ</a></li>
-      <li><a href="profile.html">Hồ sơ người dùng</a></li>
-      <li><a href="#">  
-        <div class="apply-now">
-        <div class="container">
-            <form action="#">
-                <input type="text" placeholder="Vị trí ứng tuyển">
-                <button type="submit">Tìm kiếm</button>
-            </form>
-        </div>
-        </div>
-    </a></li>
-    </ul>
-  </nav>
+  <header>
+    <h1>Tìm kiếm việc làm</h1>
+    <nav class="header__navbar">
+        <ul class="header__navbar-list">
+            <li class="header__navbar-item">
+                <a href="index.html" class="header__navbar-item-link">Trang chủ</a>
+            </li>
+            <li class="header__navbar-item">
+                <a href="jobs.html" class="header__navbar-item-link">Việc làm</a>
+            </li>
+            <li class="header__navbar-item">
+                <a href="apply.html" class="header__navbar-item-link">Ứng tuyển</a>
+            </li>
+            <li class="header__navbar-item">
+                <a href="contact.html" class="header__navbar-item-link">Liên hệ</a>
+            </li>
+        </ul>
+    </nav>
+</header>
   <div class="container">
     <h1>Hồ sơ người dùng</h1>
     <form action="submit_profile.php" method="post">
@@ -132,8 +133,9 @@ button:hover {
     padding: 0;
     width: 100%;
     background-image: url(https://www.findjobs.vn/htdocs/images/Minh%20Phuc/find%20jobs-01.jpg);
-  background-repeat: no-repeat;
-  background-size: 100rem;
+    overflow-y: auto;
+    background-repeat: repeat-y;
+    background-size: 100%;
 }
 header {
     background-color: rgb(154, 154, 161);
@@ -142,37 +144,20 @@ header {
     text-align: center;
     size: 50px;
 }
-nav {
-  background-color: #999999;
-  padding: 50px;
-  box-sizing: padding-box;
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.menu {
-  list-style-type: none;
-  bolder: 20px;
-box-sizing: border-box;
-  display: flex;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.menu li {
-  margin-left: 50px;
-}
-
-.menu li:last-child {
-  margin-right: 5;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 15px 20px;
-  display: block;
-}
-
-.menu li a:hover {
-  background-color: #000000;
-  margin-top: 2px;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .search-container {
